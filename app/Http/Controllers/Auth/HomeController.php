@@ -40,4 +40,41 @@ class HomeController extends Controller
         $post =Post::find($id);       
         return view('home.post_details',compact('post'));
     }
+     public function create_post()
+    {
+        
+        return view('home.create_post');
+    }
+      public function user_post(Request $request)
+    {
+
+        $user=Auth()->user();
+        $userid=$user->id;
+        $username=$user->name;
+        $usertype=$user->usertype;
+
+
+
+          $post = new Post;       
+          $post->title= $request->title;
+          $post->description= $request->description;
+          $post->user_id= $userid;
+          $post->name=$username;
+          $post->usertype=$usertype;
+           $post->post_staus='pending';
+
+           
+
+
+          $image=$request->image;
+          if($image)
+            {
+                $imagename=time().'.'.$image->getClientOriginalExtension();
+                 $request->image->move('postimage',$imagename);
+                 $post->image=$imagename;
+            }
+
+                 $post->save();
+                 return redirect()->back();
+    }
 }
