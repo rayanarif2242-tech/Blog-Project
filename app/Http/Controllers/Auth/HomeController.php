@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
     public function post_details($id)
     {
-       
-        return view('home.post_details');
+        $post =Post::find($id);       
+        return view('home.post_details',compact('post'));
     }
 }

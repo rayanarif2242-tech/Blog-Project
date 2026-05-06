@@ -83,8 +83,9 @@ margin-left: 30px;
         </tr>
         @endforeach
       </table>
+      
      </div>
-      @include('admin.footer')
+   
 
      
          <script type="text/javascript">
