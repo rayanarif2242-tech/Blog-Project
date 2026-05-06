@@ -45,6 +45,7 @@ margin-left: 30px;
     @if(session()->has('message'))
     <div class="alert alert-danger">
       <button type="button"class="close" data-dismiss="alert"aria-hidden="true">x</button>
+      {{session()->get('message')}}
 
 
 
@@ -60,6 +61,7 @@ margin-left: 30px;
             <th>UserType </th>
             <th>Image </th>
             <th>Delete </th>
+            <th>Edit </th>
         </tr>
         @foreach($post as $post )
         <tr>
@@ -73,6 +75,9 @@ margin-left: 30px;
                  </td>
                  <td>
                     <a href="{{ url('delete_post', $post->id) }}"class="btn btn-danger"onclick=" confirmation(event)"> Delete</a>
+                 </td>
+                  <td>
+                    <a href="{{ url('edit_page', $post->id) }}"class="btn btn-success"> Edit</a>
                  </td>
 
         </tr>

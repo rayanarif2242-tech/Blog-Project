@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -18,8 +21,8 @@
       <!-- services section end -->
       <!-- about section start -->
       @include('home.about')
-      <!-- about section end -->
-      <!-- blog section start -->
+     <!-- choose section end -->
+      <!-- footer section start -->
      @include('home.footer')
    </body>
 </html>

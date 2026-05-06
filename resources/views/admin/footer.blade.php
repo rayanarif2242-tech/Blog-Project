@@ -1,19 +1,45 @@
-<footer class="footer">
-          <div class="footer__block block no-margin-bottom">
-            <div class="container-fluid text-center">
-              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-               <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Template Hub</a>.</p>
+
+      <!-- choose section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="input_btn_main">
+               <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
+               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
             </div>
-          </div>
-        </footer>
+            <div class="location_main">
+               <div class="call_text"><img src="images/call-icon.png"></div>
+               <div class="call_text"><a href="#">Call +01 1234567890</a></div>
+               <div class="call_text"><img src="images/mail-icon.png"></div>
+               <div class="call_text"><a href="#">demo@gmail.com</a></div>
+            </div>
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
       </div>
-    </div>
-    <!-- JavaScript files-->
-   <script src="{{asset('admincss/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('admincss/vendor/popper.js/umd/popper.min.js')}}"> </script>
-    <script src="{{asset('admincss/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('admincss/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
-    <script src="{{asset('admincss/vendor/chart.js/Chart.min.js')}}"></script>
-    <script src="{{asset('admincss/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('admincss/js/charts-home.js')}}"></script>
-    <script src="{{asset('admincss/js/front.js')}}"></script>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    

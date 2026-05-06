@@ -1,36 +1,38 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        if (Auth::id()) {
-
-            $usertype = Auth()->user()->usertype;
-
-            if ($usertype== 'user') {
-                return view('home.homepage');
-            }
-
-          else  if ($usertype== 'admin') {
-                return view('admin.adminhome');
-            }
-            else{
-                return redirect()->back();
-            }
-
+        if (!Auth::id()) {
+            return redirect('/');
         }
 
+        $usertype = Auth::user()->usertype;
 
+        if ($usertype == 'user') {
+            $post = Post::all();
+            return view('home.homepage', compact('post'));
+        }
+
+        if ($usertype == 'admin') {
+            return view('admin.index');
+        }
+
+        return redirect()->back();
     }
+
     public function homepage()
     {
-        return view('home.homepage');
+        $post = Post::all();
+        return view('home.homepage', compact('post'));
     }
 }
