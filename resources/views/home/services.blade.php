@@ -10,7 +10,7 @@
                      <div><img src="/postimage/{{$post->image}}"></div>
                      <h4>{{$post->title}}</h4>
                      <p>Post by <b>{{$post->name}}</b></p>
-                     <div class="btn_main"><a href="#">Read more</a></div>
+                     <div class="btn_main"><a href="{{url('post_details',$post->id)}}">Read more</a></div>
                   </div>
                   @endforeach
             </div>
