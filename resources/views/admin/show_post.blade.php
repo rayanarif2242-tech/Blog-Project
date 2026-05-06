@@ -33,11 +33,6 @@ margin-left: 30px;
      }
 
 
-
-
-
-
-
    </style>
   </head>
   <body>
@@ -51,7 +46,7 @@ margin-left: 30px;
     <div class="alert alert-danger">
       <button type="button"class="close" data-dismiss="alert"aria-hidden="true">x</button>
 
-      
+
 
     </div>
     @endif
