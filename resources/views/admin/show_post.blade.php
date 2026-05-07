@@ -62,6 +62,8 @@ margin-left: 30px;
             <th>Image </th>
             <th>Delete </th>
             <th>Edit </th>
+             <th>Status Accept </th>
+              <th>Status Reject </th>
         </tr>
         @foreach($post as $post )
         <tr>
@@ -78,6 +80,12 @@ margin-left: 30px;
                  </td>
                   <td>
                     <a href="{{ url('edit_page', $post->id) }}"class="btn btn-success"> Edit</a>
+                 </td>
+                 <td>
+                  <a onclick="return confirm( 'Are you sure to accept Post' )" href="{{url('accept_post',$post->id)}}" class="btn btn-outline-secondary">Accept</a>
+                 </td>
+                  <td>
+                  <a onclick="return confirm( 'Are you sure to Reject Post' )" href="{{url('reject_post',$post->id)}}" class="btn btn-primary">Reject</a>
                  </td>
 
         </tr>

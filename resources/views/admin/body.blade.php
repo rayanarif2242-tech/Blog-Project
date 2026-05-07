@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
@@ -67,15 +67,15 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-4">
-                <div class="bar-chart block no-margin-bottom">
+                <div class="bar-chart block no-margin-bottom" style="height: 250px;">
                   <canvas id="barChartExample1"></canvas>
                 </div>
-                <div class="bar-chart block">
+                <div class="bar-chart block" style="height: 250px;">
                   <canvas id="barChartExample2"></canvas>
                 </div>
               </div>
               <div class="col-lg-8">
-                <div class="line-chart block">
+                <div class="line-chart block" style="height: 350px;">
                   <canvas id="lineChart"></canvas>
                 </div>
               </div>
@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 {
                     label: "Page Visitors",
                     fill: true,
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'rgba(134, 77, 217, 0.1)',
                     borderColor: '#864DD9', // Purple
                     pointBorderColor: '#864DD9',
                     data: [20, 40, 35, 55, 45, 70, 60],
@@ -412,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 {
                     label: "Page Views",
                     fill: true,
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'rgba(134, 77, 217, 0.1)',
                     borderColor: '#EF7F9F', // Pink
                     pointBorderColor: '#EF7F9F',
                     data: [40, 25, 60, 40, 85, 35, 70],

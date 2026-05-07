@@ -102,5 +102,19 @@ public function update_post(Request $request,$id)
         return redirect()->back()->with('message','Post Updated successfully');
     
 }
+       public function accept_post($id)
+       {
+        $data=Post::find($id);
+        $data->post_staus='active';
+        $data->save();
+        return redirect()->back()->with('message','Post Status Change to Active');
+       }
+        public function reject_post($id)
+       {
+        $data=Post::find($id);
+        $data->post_staus='rejected';
+        $data->save();
+        return redirect()->back()->with('message','Post Status Change to Rejected');
+       }
 
 }
