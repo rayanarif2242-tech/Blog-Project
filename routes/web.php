@@ -16,7 +16,7 @@ use App\Http\Controllers\Auth\HomeController;
 |
 */
 
-Route::get('/',[HomeController::class,'HomePage']);
+Route::get('/',[HomeController::class,'homePage']);
 
 
 

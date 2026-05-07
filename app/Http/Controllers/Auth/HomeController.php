@@ -12,28 +12,34 @@ use Alert;
 class HomeController extends Controller
 {
     public function index()
+{
+    $post = Post::where('post_staus','=','active')->get();
+
+    if (!Auth::id())
     {
-        if (!Auth::id()) {
-            return redirect('/');
-        }
+        return view('home.homepage', compact('post'));
+    }
 
-        $usertype = Auth::user()->usertype;
+    $usertype = Auth::user()->usertype;
 
-        if ($usertype == 'user') {
-            $post = Post::all();
-            return view('home.homepage', compact('post'));
-        }
-
-        if ($usertype == 'admin') {
-            return view('admin.index');
-        }
-
+    if ($usertype == 'user')
+    {
+        return view('home.homepage', compact('post'));
+    }
+    elseif ($usertype == 'admin')
+    {
+        return view('admin.index');
+    }
+    else
+    {
         return redirect()->back();
     }
+}
+
 
     public function homepage()
     {
-        $post = Post::all();
+        $post = Post::where('post_staus','=','active')->get();
         return view('home.homepage', compact('post'));
     }
     public function post_details($id)

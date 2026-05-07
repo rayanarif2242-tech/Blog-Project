@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
@@ -74,8 +75,8 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <div class="line-cahrt block">
-                  <canvas id="lineCahrt"></canvas>
+                <div class="line-chart block">
+                  <canvas id="lineChart"></canvas>
                 </div>
               </div>
             </div>
@@ -132,7 +133,7 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="user-block block text-center">
-                  <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid">
+                 <div class="avatar"><img src="{{ asset('admincss/img/avatar-1.jpg') }}" alt="..." class="img-fluid">
                     <div class="order dashbg-2">1st</div>
                   </div><a href="#" class="user-title">
                     <h3 class="h5">Richard Nevoreski</h3><span>@richardnevo</span></a>
@@ -146,7 +147,7 @@
               </div>
               <div class="col-lg-4">
                 <div class="user-block block text-center">
-                  <div class="avatar"><img src="img/avatar-4.jpg" alt="..." class="img-fluid">
+              <div class="avatar"><img src="{{ asset('admincss/img/avatar-4.jpg') }}" alt="..." class="img-fluid">
                     <div class="order dashbg-1">2nd</div>
                   </div><a href="#" class="user-title">
                     <h3 class="h5">Samuel Watson</h3><span>@samwatson</span></a>
@@ -177,7 +178,8 @@
               <div class="row d-flex align-items-center">
                 <div class="col-lg-4 d-flex align-items-center">
                   <div class="order">4th</div>
-                  <div class="avatar"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Tomas Hecktor</strong><span class="d-block">@tomhecktor</span></a>
+                  
+                  <div class="avatar"> <img src="{{ asset('admincss/img/avatar-1.jpg') }}" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Tomas Hecktor</strong><span class="d-block">@tomhecktor</span></a>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="contributions">410 Contributions</div>
@@ -195,7 +197,7 @@
               <div class="row d-flex align-items-center">
                 <div class="col-lg-4 d-flex align-items-center">
                   <div class="order">5th</div>
-                  <div class="avatar"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Alexander Shelby</strong><span class="d-block">@alexshelby</span></a>
+                 <div class="avatar"> <img src="{{ asset('admincss/img/avatar-2.jpg') }}" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Alexander Shelby</strong><span class="d-block">@alexshelby</span></a>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="contributions">320 Contributions</div>
@@ -213,7 +215,7 @@
               <div class="row d-flex align-items-center">
                 <div class="col-lg-4 d-flex align-items-center">
                   <div class="order">6th</div>
-                  <div class="avatar"> <img src="img/avatar-6.jpg" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Arther Kooper</strong><span class="d-block">@artherkooper</span></a>
+              <div class="avatar"> <img src="{{ asset('admincss/img/avatar-6.jpg') }}" alt="..." class="img-fluid"></div><a href="#" class="name"><strong class="d-block">Arther Kooper</strong><span class="d-block">@artherkooper</span></a>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="contributions">170 Contributions</div>
@@ -318,23 +320,23 @@
                 <div class="messages-block block">
                   <div class="title"><strong>New Messages</strong></div>
                   <div class="messages"><a href="#" class="message d-flex align-items-center">
-                      <div class="profile"><img src="img/avatar-3.jpg" alt="..." class="img-fluid">
+                     <div class="profile"><img src="{{ asset('admincss/img/avatar-3.jpg') }}" alt="..." class="img-fluid">
                         <div class="status online"></div>
                       </div>
                       <div class="content">   <strong class="d-block">Nadia Halsey</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">9:30am</small></div></a><a href="#" class="message d-flex align-items-center">
-                      <div class="profile"><img src="img/avatar-2.jpg" alt="..." class="img-fluid">
+                      <div class="profile"><img src="{{ asset('admincss/img/avatar-2.jpg') }}" alt="..." class="img-fluid">
                         <div class="status away"></div>
                       </div>
                       <div class="content">   <strong class="d-block">Peter Ramsy</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">7:40am</small></div></a><a href="#" class="message d-flex align-items-center">
-                      <div class="profile"><img src="img/avatar-1.jpg" alt="..." class="img-fluid">
+                      <div class="profile"><img src="{{ asset('admincss/img/avatar-1.jpg') }}" alt="..." class="img-fluid">
                         <div class="status busy"></div>
                       </div>
                       <div class="content">   <strong class="d-block">Sam Kaheil</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">6:55am</small></div></a><a href="#" class="message d-flex align-items-center">
-                      <div class="profile"><img src="img/avatar-5.jpg" alt="..." class="img-fluid">
+                     <div class="profile"><img src="{{ asset('admincss/img/avatar-5.jpg') }}" alt="..." class="img-fluid">
                         <div class="status offline"></div>
                       </div>
                       <div class="content">   <strong class="d-block">Sara Wood</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">10:30pm</small></div></a><a href="#" class="message d-flex align-items-center">
-                      <div class="profile"><img src="img/avatar-1.jpg" alt="..." class="img-fluid">
+                     <div class="profile"><img src="{{ asset('admincss/img/avatar-1.jpg') }}" alt="..." class="img-fluid">
                         <div class="status online"></div>
                       </div>
                       <div class="content">   <strong class="d-block">Nader Magdy</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">9:47pm</small></div></a></div>
@@ -376,3 +378,98 @@
             </div>
           </div>
         </section>
+
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Helper for common options
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { display: false },
+            x: { display: false }
+        }
+    };
+
+    // 1. MAIN LINE CHART (The large one on the right)
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+            datasets: [
+                {
+                    label: "Page Visitors",
+                    fill: true,
+                    backgroundColor: 'transparent',
+                    borderColor: '#864DD9', // Purple
+                    pointBorderColor: '#864DD9',
+                    data: [20, 40, 35, 55, 45, 70, 60],
+                },
+                {
+                    label: "Page Views",
+                    fill: true,
+                    backgroundColor: 'transparent',
+                    borderColor: '#EF7F9F', // Pink
+                    pointBorderColor: '#EF7F9F',
+                    data: [40, 25, 60, 40, 85, 35, 70],
+                }
+            ]
+        },
+        options: {
+            scales: {
+                x: { grid: { display: false, drawBorder: false }, ticks: { color: '#8a8d93' } },
+                y: { grid: { display: true, color: '#34373c' }, ticks: { color: '#8a8d93' } }
+            },
+            plugins: { legend: { labels: { color: '#8a8d93' } } }
+        }
+    });
+
+    // 2. BAR CHART EXAMPLE 1 (Purple Bars)
+    const bar1 = document.getElementById('barChartExample1').getContext('2d');
+    new Chart(bar1, {
+        type: 'bar',
+        data: {
+            labels: ["A", "B", "C", "D", "E", "F"],
+            datasets: [{
+                backgroundColor: '#864DD9',
+                data: [65, 59, 80, 81, 56, 55]
+            }]
+        },
+        options: commonOptions
+    });
+
+    // 3. BAR CHART EXAMPLE 2 (Pink Bars)
+    const bar2 = document.getElementById('barChartExample2').getContext('2d');
+    new Chart(bar2, {
+        type: 'bar',
+        data: {
+            labels: ["A", "B", "C", "D", "E", "F"],
+            datasets: [{
+                backgroundColor: '#EF7F9F',
+                data: [45, 39, 60, 21, 46, 35]
+            }]
+        },
+        options: commonOptions
+    });
+
+    // 4. SMALL PIE CHARTS (Bottom section)
+    ['pieChartHome1', 'pieChartHome2', 'pieChartHome3'].forEach((id, index) => {
+        const colors = [['#864DD9', '#2d3035'], ['#EF7F9F', '#2d3035'], ['#5E5FE3', '#2d3035']];
+        new Chart(document.getElementById(id).getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [70, 30],
+                    backgroundColor: colors[index],
+                    borderWidth: 0
+                }]
+            },
+            options: { cutout: '80%', plugins: { legend: { display: false } } }
+        });
+    });
+});
+</script>
