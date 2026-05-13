@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use App\Models\Post;
 
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -46,7 +47,7 @@ $usertype= $user->usertype;
   $post->title= $request->title;
    $post->description= $request->description;
      $post->post_staus= 'active';
-
+    $post->uuid = (string) Str::uuid();
 $post->user_id= $userid;
 $post->name= $name;
 $post->usertype= $usertype;
@@ -72,49 +73,53 @@ public function show_post()
     $post =Post::all();
     return view('admin.show_post',compact('post'));    
 }
-public function delete_post($id)
+public function delete_post($uuid)
 {
-    $post= Post::find($id);
+    $post = Post::where('uuid', $uuid)->firstOrFail();
     $post->delete();
-    return redirect()->back()->with('message','Post Deleted successfully');
+
+    return redirect()->back()->with('message', 'Post Deleted successfully');
 }
-public function edit_page($id)
+public function edit_page($uuid)
 {
-  
-    $post=Post::find($id);
-    //  dd($post);
-    return view('admin.edit_page',compact('post'));
+    $post = Post::where('uuid', $uuid)->first();
+
+    return view('admin.edit_page', compact('post'));
 }
-public function update_post(Request $request,$id)
+public function update_post(Request $request, $uuid)
 {
-  
-    $data=Post::find($id);
-    $data->title=$request->title;
-        $data->description=$request->description;
-        $image=$request->image;
-        if($image)
-            {
-                $imagename=time().'.'.$image->getClientOriginalExtension();
-                $request->image->move('postimage',$imagename);
-                $data->image= $imagename;
-            }
-        $data->save();
-        return redirect()->back()->with('message','Post Updated successfully');
-    
+    $data = Post::where('uuid', $uuid)->firstOrFail();
+
+    $data->title = $request->title;
+    $data->description = $request->description;
+
+    $image = $request->image;
+
+    if ($image) {
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('postimage', $imagename);
+        $data->image = $imagename;
+    }
+
+    $data->save();
+
+    return redirect()->back()->with('message', 'Post Updated successfully');
 }
-       public function accept_post($id)
-       {
-        $data=Post::find($id);
-        $data->post_staus='active';
-        $data->save();
-        return redirect()->back()->with('message','Post Status Change to Active');
-       }
-        public function reject_post($id)
-       {
-        $data=Post::find($id);
-        $data->post_staus='rejected';
-        $data->save();
-        return redirect()->back()->with('message','Post Status Change to Rejected');
-       }
+      public function accept_post($uuid)
+{
+    $data = Post::where('uuid', $uuid)->firstOrFail();
+    $data->post_staus = 'active';
+    $data->save();
+
+    return redirect()->back()->with('message', 'Post Status Change to Active');
+}
+        public function reject_post($uuid)
+{
+    $data = Post::where('uuid', $uuid)->firstOrFail();
+    $data->post_staus = 'rejected';
+    $data->save();
+
+    return redirect()->back()->with('message', 'Post Status Change to Rejected');
+}
 
 }

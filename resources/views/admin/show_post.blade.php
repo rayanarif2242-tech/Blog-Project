@@ -68,7 +68,7 @@ margin-left: 30px;
         @foreach($post as $post )
         <tr>
             <td>{{ $post->title}}</td>
-             <td>{{ $post->description}}</td>
+<td>{!! $post->description !!}</td>
               <td>{{ $post->name}}</td>
                <td>{{ $post->post_staus}}</td>
                 <td>{{ $post->usertype}}</td>
@@ -76,16 +76,16 @@ margin-left: 30px;
                     <img class="img_deg" src="postimage/{{$post->image}}" >
                  </td>
                  <td>
-                    <a href="{{ url('delete_post', $post->id) }}"class="btn btn-danger"onclick=" confirmation(event)"> Delete</a>
+                    <a href="{{ url('delete_post', $post->uuid) }}"class="btn btn-danger"onclick=" confirmation(event)"> Delete</a>
                  </td>
                   <td>
-                    <a href="{{ url('edit_page', $post->id) }}"class="btn btn-success"> Edit</a>
+                    <a href="{{ url('edit_page', $post->uuid) }}"class="btn btn-success"> Edit</a>
                  </td>
                  <td>
-                  <a onclick="return confirm( 'Are you sure to accept Post' )" href="{{url('accept_post',$post->id)}}" class="btn btn-outline-secondary">Accept</a>
+                  <a onclick="return confirm( 'Are you sure to accept Post' )" href="{{url('accept_post',$post->uuid)}}" class="btn btn-outline-secondary">Accept</a>
                  </td>
                   <td>
-                  <a onclick="return confirm( 'Are you sure to Reject Post' )" href="{{url('reject_post',$post->id)}}" class="btn btn-primary">Reject</a>
+                  <a onclick="return confirm( 'Are you sure to Reject Post' )" href="{{url('reject_post',$post->uuid)}}" class="btn btn-primary">Reject</a>
                  </td>
 
         </tr>

@@ -57,7 +57,7 @@
         @endif
 
         <h1 class="title_deg">Update Post</h1>
-        <form action="{{url('update_post_data',$data->id)}}" method="POST" enctype="multipart/form-data">
+        <form action="{{url('update_post_data',$data->uuid)}}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="input_deg">
                 <label>Title</label>

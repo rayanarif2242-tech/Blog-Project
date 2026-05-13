@@ -43,7 +43,7 @@
     </div>
     @endif
             <h1 class="post_title">Update Post</h1>
-             <form action="{{url('update_post',$post->id)}}" method="Post" enctype="multipart/form-data">
+             <form action="{{url('update_post',$post->uuid)}}" method="Post" enctype="multipart/form-data">
                 @csrf
                  <div class="div_center">
           <label>  Post Title</label>
