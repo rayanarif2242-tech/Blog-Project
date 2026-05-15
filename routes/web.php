@@ -3,6 +3,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\HomeController;
+use App\Http\Controllers\GoogleController;
 
 
 /*
@@ -59,3 +60,6 @@ Route::get('/post_update_page/{uuid}',[HomeController::class,'post_update_page']
 Route::post('/update_post_data/{uuid}',[HomeController::class,'update_post_data'])->middleware('auth');
 Route::get('/accept_post/{uuid}',[AdminController::class,'accept_post']);
 Route::get('/reject_post/{uuid}',[AdminController::class,'reject_post']);
+Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle']);
+
+Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
